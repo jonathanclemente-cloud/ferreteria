@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferretería Ernesto's</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       PROMO BANNER
+  ═══════════════════════════════════════ -->
+  <div class="promo-banner" id="promoBanner">
+    <div class="container">
+      <div class="promo-banner__text">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+        <span><strong>¡Oferta especial!</strong> Hasta 40% de descuento en herramientas eléctricas. <a href="#">Comprar ahora</a></span>
+      </div>
+      <button class="promo-banner__close" id="closeBanner" aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TOP BAR
+  ═══════════════════════════════════════ -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar__left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Envíos disponibles en Santa Ana</span>
+      </div>
+      <div class="top-bar__right">
+        <a href="#" class="top-bar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          <span>Iniciar sesión</span>
+        </a>
+        <a href="#" class="top-bar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/></svg>
+          <span>Mis pedidos</span>
+        </a>
+        <a href="#" class="top-bar__link" id="topCartBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          <span>Carrito</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════ -->
+  <header class="header">
+    <div class="container">
+      <div class="header__logo">Ferretería <span>Ernesto's</span></div>
+
+      <!-- Búsqueda -->
+      <div class="header__search" id="searchWrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Buscar productos, herramientas, materiales..." autocomplete="off" />
+        <div class="search-dropdown" id="searchDropdown">
+          <div class="search-dropdown__section" id="dropdownDefault">
+            <div class="search-dropdown__label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Búsquedas recientes
+            </div>
+            <button class="search-dropdown__item">Taladro DeWalt</button>
+            <button class="search-dropdown__item">Martillo</button>
+            <button class="search-dropdown__item">Cable eléctrico</button>
+            <div class="search-dropdown__label" style="margin-top:0.75rem">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              Búsquedas populares
+            </div>
+            <button class="search-dropdown__item">Herramientas eléctricas</button>
+            <button class="search-dropdown__item">Pintura exterior</button>
+            <button class="search-dropdown__item">Tubería PVC</button>
+          </div>
+          <div class="search-dropdown__section" id="dropdownResults" style="display:none">
+            <div class="search-dropdown__label">Productos sugeridos</div>
+            <div id="dropdownResultsList"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Íconos -->
+      <div class="header__icons">
+        <button class="header__icon-btn" aria-label="Favoritos">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </button>
+        <button class="header__icon-btn" id="cartBtn" aria-label="Carrito">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          <span class="cart-badge" id="cartBadge">3</span>
+        </button>
+        <button class="header__icon-btn" aria-label="Cuenta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <button class="navbar__depts" id="deptsBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Departamentos
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="navbar__links">
+        <a href="#">Promociones</a>
+        <a href="#">Marcas</a>
+        <a href="#">Ideas y soluciones</a>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="container">
+        <div class="mega-menu__inner">
+          <div class="mega-menu__col">
+            <h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              Construcción
+            </h3>
+            <ul>
+              <li><a href="#">Cemento y Concreto</a></li>
+              <li><a href="#">Ladrillos y Blocks</a></li>
+              <li><a href="#">Arena y Grava</a></li>
+              <li><a href="#">Varillas y Acero</a></li>
+            </ul>
+          </div>
+          <div class="mega-menu__col">
+            <h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+              Herramientas
+            </h3>
+            <ul>
+              <li><a href="#">Herramientas Eléctricas</a></li>
+              <li><a href="#">Herramientas Manuales</a></li>
+              <li><a href="#">Taladros</a></li>
+              <li><a href="#">Sierras y Cortadoras</a></li>
+            </ul>
+          </div>
+          <div class="mega-menu__col">
+            <h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><bolt/><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              Eléctrico
+            </h3>
+            <ul>
+              <li><a href="#">Cables y Alambres</a></li>
+              <li><a href="#">Interruptores</a></li>
+              <li><a href="#">Tomacorrientes</a></li>
+              <li><a href="#">Iluminación</a></li>
+            </ul>
+          </div>
+          <div class="mega-menu__col">
+            <h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0c0 5.523-4.477 10-10 10"/></svg>
+              Fontanería
+            </h3>
+            <ul>
+              <li><a href="#">Tuberías PVC</a></li>
+              <li><a href="#">Llaves y Grifos</a></li>
+              <li><a href="#">Accesorios de Baño</a></li>
+              <li><a href="#">Bombas de Agua</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       BREADCRUMB
+  ═══════════════════════════════════════ -->
+  <div class="breadcrumb">
+    <div class="container">
+      <ol>
+        <li>
+          <a href="#" class="breadcrumb__home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Inicio
+          </a>
+        </li>
+        <li class="breadcrumb__sep">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </li>
+        <li><span class="breadcrumb__current" id="breadcrumbCurrent">Productos</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN: INICIO
+  ═══════════════════════════════════════ -->
+  <div id="secInicio">
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Slide 1 -->
+    <div class="hero__slide active" style="background:#FF6B35">
+      <div class="container" style="position:relative;z-index:2;width:100%;display:flex;align-items:center">
+        <div class="hero__content">
+          <h2>¡Ofertas increíbles en herramientas!</h2>
+          <p>Hasta 40% de descuento en herramientas eléctricas</p>
+          <a href="#" class="hero__cta">Ver ofertas</a>
+        </div>
+      </div>
+      <img class="hero__img" src="https://images.unsplash.com/photo-1546827209-a218e99fdbe9?w=900&q=80" alt="Herramientas" />
+      <div class="hero__img-overlay" style="color:#FF6B35"></div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="hero__slide" style="background:#2E7D32">
+      <div class="container" style="position:relative;z-index:2;width:100%;display:flex;align-items:center">
+        <div class="hero__content">
+          <h2>Nuevas herramientas profesionales</h2>
+          <p>Las mejores marcas para tu proyecto</p>
+          <a href="#" class="hero__cta">Explorar</a>
+        </div>
+      </div>
+      <img class="hero__img" src="https://images.unsplash.com/photo-1518709414768-a88981a4515d?w=900&q=80" alt="Profesional" />
+      <div class="hero__img-overlay" style="color:#2E7D32"></div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="hero__slide" style="background:#1565C0">
+      <div class="container" style="position:relative;z-index:2;width:100%;display:flex;align-items:center">
+        <div class="hero__content">
+          <h2>Todo para tu construcción</h2>
+          <p>Materiales de calidad al mejor precio</p>
+          <a href="#" class="hero__cta">Comprar ahora</a>
+        </div>
+      </div>
+      <img class="hero__img" src="https://images.unsplash.com/photo-1590736969596-f27b3f29c7d2?w=900&q=80" alt="Construcción" />
+      <div class="hero__img-overlay" style="color:#1565C0"></div>
+    </div>
+
+    <!-- Controles -->
+    <button class="hero__nav-btn hero__nav-btn--prev" id="heroPrev">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="hero__nav-btn hero__nav-btn--next" id="heroNext">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="hero__dots" id="heroDots"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CATEGORÍAS
+  ═══════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Categorías destacadas</h2>
+        <p class="section__subtitle">Encuentra todo lo que necesitas para tu proyecto</p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- generado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PRODUCTOS
+  ═══════════════════════════════════════ -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Productos destacados</h2>
+        <p class="section__subtitle">Las mejores ofertas en herramientas y materiales</p>
+      </div>
+      <div class="products-layout">
+        <!-- Filtros -->
+        <aside class="products-sidebar">
+          <div class="filters-box">
+            <h3>Filtros</h3>
+            <div class="filter-group">
+              <h4>Categorías</h4>
+              <label class="filter-check"><input type="checkbox"> <span>Construcción</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Herramientas</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Eléctrico</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Fontanería</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Pintura</span></label>
+            </div>
+            <div class="filter-group">
+              <h4>Marca</h4>
+              <label class="filter-check"><input type="checkbox"> <span>DeWalt</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Makita</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Bosch</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Stanley</span></label>
+              <label class="filter-check"><input type="checkbox"> <span>Black & Decker</span></label>
+            </div>
+            <div class="filter-group">
+              <h4>Precio</h4>
+              <input type="range" class="price-range" id="priceRange" min="0" max="1000" value="1000">
+              <div class="price-range-values"><span>$0</span><span id="priceMax">$1000</span></div>
+            </div>
+            <div class="filter-group">
+              <h4>Calificación</h4>
+              <label class="filter-check"><input type="radio" name="rating"> <div class="stars-row" data-rating="5"></div> <span>y más</span></label>
+              <label class="filter-check"><input type="radio" name="rating"> <div class="stars-row" data-rating="4"></div> <span>y más</span></label>
+              <label class="filter-check"><input type="radio" name="rating"> <div class="stars-row" data-rating="3"></div> <span>y más</span></label>
+            </div>
+            <div class="filter-group">
+              <h4>Disponibilidad</h4>
+              <label class="filter-check"><input type="checkbox"> <span>Solo en stock</span></label>
+            </div>
+            <button class="btn-apply-filters">Aplicar filtros</button>
+          </div>
+        </aside>
+        <!-- Grid de productos -->
+        <div class="products-grid" id="productsGrid">
+          <!-- generado por JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /secInicio -->
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN: PROMOCIONES
+  ═══════════════════════════════════════ -->
+  <div id="secPromociones">
+    <section class="section section--gray">
+      <div class="container">
+        <button class="btn-back" onclick="showSection('inicio')">← Volver al inicio</button>
+        <div class="section__header">
+          <h2 class="section__title">🏷️ Promociones</h2>
+          <p class="section__subtitle">Los mejores descuentos en herramientas y materiales</p>
+        </div>
+        <div class="products-grid" id="promoGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN: MARCAS
+  ═══════════════════════════════════════ -->
+  <div id="secMarcas">
+    <section class="section">
+      <div class="container">
+        <button class="btn-back" onclick="showSection('inicio')">← Volver al inicio</button>
+        <div class="section__header">
+          <h2 class="section__title">🏆 Marcas</h2>
+          <p class="section__subtitle">Las mejores marcas del mercado disponibles en nuestra tienda</p>
+        </div>
+        <div class="brands-grid" id="brandsGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN: IDEAS Y SOLUCIONES
+  ═══════════════════════════════════════ -->
+  <div id="secIdeas">
+    <section class="section section--gray">
+      <div class="container">
+        <button class="btn-back" onclick="showSection('inicio')">← Volver al inicio</button>
+        <div class="section__header">
+          <h2 class="section__title">💡 Ideas y soluciones</h2>
+          <p class="section__subtitle">Guías y consejos para tus proyectos</p>
+        </div>
+        <div class="ideas-grid" id="ideasGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN: DEPARTAMENTO
+  ═══════════════════════════════════════ -->
+  <div id="secDepartamento">
+    <section class="section section--gray">
+      <div class="container">
+        <button class="btn-back" onclick="showSection('inicio')">← Volver al inicio</button>
+        <div class="section__header">
+          <h2 class="section__title" id="deptTitle">Departamento</h2>
+          <p class="section__subtitle">Productos disponibles en esta categoría</p>
+        </div>
+        <div class="products-grid" id="deptGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN: BÚSQUEDA
+  ═══════════════════════════════════════ -->
+  <div id="secBusqueda">
+    <section class="section section--gray">
+      <div class="container">
+        <button class="btn-back" onclick="showSection('inicio')">← Volver al inicio</button>
+        <div class="section__header">
+          <h2 class="section__title" id="searchTitle">Resultados de búsqueda</h2>
+        </div>
+        <div class="products-grid" id="searchGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       BENEFICIOS
+  ═══════════════════════════════════════ -->
+  <section class="section" style="border-top: 1px solid var(--border)">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Entrega rápida</h3>
+          <p>Envíos en 24-48 horas</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>Productos de calidad</h3>
+          <p>Garantía en todos nuestros productos</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <h3>Atención al cliente</h3>
+          <p>Soporte 7 días a la semana</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3>Pago seguro</h3>
+          <p>Múltiples métodos de pago</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer__logo">Ferretería <span>Ernesto's</span></div>
+          <p>Tu ferretería de confianza desde 1995. Calidad y servicio garantizado.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Información</h4>
+          <ul>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Política de devoluciones</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Servicio al cliente</h4>
+          <ul>
+            <li><a href="#">Rastrear pedido</a></li>
+            <li><a href="#">Envíos y entregas</a></li>
+            <li><a href="#">Métodos de pago</a></li>
+            <li><a href="#">Garantías</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <ul class="footer__contact">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+              Av. Principal, Santa Ana, El Salvador
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              +503 2222-3333
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              info@ferreteriaernestos.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container" style="padding:0">
+          <p>© 2026 Ferretería Ernesto's. Todos los derechos reservados.</p>
+          <div class="footer__payments">
+            <span>Métodos de pago:</span>
+            <div class="payment-badge">VISA</div>
+            <div class="payment-badge">MC</div>
+            <div class="payment-badge">AMEX</div>
+            <div class="payment-badge">PayPal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       CARRITO SIDEBAR
+  ═══════════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar__header">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        Carrito de compras
+      </h2>
+      <button class="cart-close" id="cartClose">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-sidebar__footer" id="cartFooter" style="display:none">
+      <div class="cart-totals">
+        <div class="cart-totals__row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+        <div class="cart-totals__row"><span>Impuesto (13%)</span><span id="cartTax">$0.00</span></div>
+        <div class="cart-totals__row"><span>Envío</span><span id="cartShipping">$15.00</span></div>
+        <div class="cart-totals__total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      </div>
+      <button class="btn-checkout">Finalizar compra</button>
+      <p class="cart-free-shipping" id="freeShippingMsg"></p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       MODAL DETALLE PRODUCTO
+  ═══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="productModal">
+      <button class="modal__close" id="modalClose">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="modal__grid">
+        <!-- Galería -->
+        <div class="modal__gallery">
+          <div class="modal__main-img"><img id="modalMainImg" src="" alt="Producto"></div>
+          <div class="modal__thumbs" id="modalThumbs"></div>
+        </div>
+        <!-- Info -->
+        <div class="modal__info">
+          <p class="modal__brand" id="modalBrand"></p>
+          <h2 class="modal__name" id="modalName"></h2>
+          <div class="modal__rating" id="modalRating"></div>
+          <p class="modal__price-old" id="modalOldPrice"></p>
+          <div class="modal__price-row">
+            <span class="modal__price" id="modalPrice"></span>
+            <span class="modal__price-badge" id="modalBadge" style="display:none"></span>
+          </div>
+          <div class="modal__stock">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            En stock - Envío disponible
+          </div>
+          <p class="modal__qty-label">Cantidad</p>
+          <div class="modal__qty">
+            <button class="modal__qty-btn" id="qtyMinus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <span class="modal__qty-num" id="qtyNum">1</span>
+            <button class="modal__qty-btn" id="qtyPlus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+          </div>
+          <div class="modal__actions">
+            <button class="btn-cart" id="modalAddToCart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              Agregar al carrito
+            </button>
+            <button class="btn-buy">Comprar ahora</button>
+            <button class="btn-wishlist">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              Agregar a favoritos
+            </button>
+          </div>
+          <!-- Tabs -->
+          <div class="modal__tabs-nav">
+            <button class="modal__tab active" data-tab="description">Descripción</button>
+            <button class="modal__tab" data-tab="specs">Especificaciones</button>
+            <button class="modal__tab" data-tab="reviews">Opiniones</button>
+          </div>
+          <div class="modal__tab-content active" id="tab-description">
+            <p style="margin-bottom:0.75rem">Motor sin escobillas de alta eficiencia, batería de litio de 20V. Perfecto para proyectos de construcción y reparación.</p>
+            <ul>
+              <li>Motor sin escobillas de alta eficiencia</li>
+              <li>Batería de litio de 20V</li>
+              <li>Chuck de 1/2" con ajuste automático</li>
+              <li>Luz LED integrada</li>
+              <li>Diseño ergonómico y ligero</li>
+            </ul>
+          </div>
+          <div class="modal__tab-content" id="tab-specs">
+            <table class="specs-table">
+              <tr><td>Voltaje</td><td>20V MAX</td></tr>
+              <tr><td>Velocidad máxima</td><td>1,500 RPM</td></tr>
+              <tr><td>Torque máximo</td><td>300 UWO</td></tr>
+              <tr><td>Peso</td><td>1.8 kg</td></tr>
+              <tr><td>Tipo de batería</td><td>Litio</td></tr>
+              <tr><td>Garantía</td><td>3 años</td></tr>
+            </table>
+          </div>
+          <div class="modal__tab-content" id="tab-reviews">
+            <div class="review-item">
+              <div class="review-header"><span class="review-author">Juan Pérez</span><span class="review-date">15 Mar 2026</span></div>
+              <div class="stars-row" data-rating="5" style="margin-bottom:0.35rem"></div>
+              <p>Excelente producto, muy potente y duradero.</p>
+            </div>
+            <div class="review-item">
+              <div class="review-header"><span class="review-author">María López</span><span class="review-date">10 Mar 2026</span></div>
+              <div class="stars-row" data-rating="4" style="margin-bottom:0.35rem"></div>
+              <p>Buena calidad pero un poco pesado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
